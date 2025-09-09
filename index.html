@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Betting MVP Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width:800px; margin:20px auto; padding:10px; }
+    .box { border:1px solid #ccc; padding:12px; margin-bottom:12px; border-radius:8px; }
+    button { padding:8px 12px; }
+  </style>
+</head>
+<body>
+  <h1>Betting MVP Demo</h1>
+  <div id="status"></div>
+
+  <div class="box" id="auth">
+    <h3>Register / Login</h3>
+    <input id="email" placeholder="email" />
+    <input id="password" placeholder="password" type="password" />
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="box" id="walletBox" style="display:none;">
+    <h3>Wallet</h3>
+    <div>Balance: <span id="balance">0</span></div>
+    <input id="depositAmt" placeholder="amount" />
+    <button onclick="deposit()">Deposit</button>
+  </div>
+
+  <div class="box" id="eventsBox" style="display:none;">
+    <h3>Events</h3>
+    <div id="events"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
